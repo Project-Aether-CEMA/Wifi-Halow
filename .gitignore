@@ -1,0 +1,5 @@
+# Firmware images are linked from the device READMEs, not stored here
+*.img
+*.img.gz
+*.img.xz
+*.zip

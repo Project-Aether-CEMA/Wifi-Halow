@@ -1,0 +1,13 @@
+# Keep line endings consistent for guides and scripts
+* text=auto
+*.md text eol=lf
+*.sh text eol=lf
+
+# Firmware, overlays and board config files must never be altered by Git
+*.bin binary
+*.dtbo binary
+*.dtb binary
+*.img binary
+*.gz binary
+*.png binary
+*.jpg binary
