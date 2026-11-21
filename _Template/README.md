@@ -20,7 +20,7 @@
 Follow these in order:
 
 1. **[Host setup.md](<Host setup.md>)**: getting the hardware working. Rename the file for the host, e.g. `RaspberryPi 4B setup.md`.
-2. **[WebUi Setup.md](<WebUi Setup.md>)**: setting up the HaLow network.
+2. **[WebUi Setup - <layout>.md](<WebUi Setup.md>)**: setting up the HaLow network, one guide per layout (e.g. Mesh, Star).
 
 ---
 

@@ -25,7 +25,7 @@ Wifi Halow/
 └── <Vendor> <Model>/          ← one folder per device or HAT
     ├── README.md              ← summary, status and links to the guides
     ├── <host> setup.md        ← getting the hardware working
-    ├── WebUi Setup.md         ← setting up the HaLow network
+    ├── WebUi Setup - <layout>.md ← setting up the HaLow network (one guide per layout)
     ├── Files/                 ← overlays, board config files, firmware
     └── images/                ← screenshots used by the guides
 ```
@@ -49,6 +49,7 @@ Wifi Halow/
 
 - **Small files** (device tree overlays `.dtbo`, board config files `.bin`) go in the device's `Files/` folder.
 - **Firmware images are not stored in the repo.** Link to the official download and record the exact file name and SHA-256 in the device README. `.gitignore` keeps `.img` / `.img.gz` files out of commits, so you can keep a local copy in `Files/` safely.
+- **Screenshots** go in the device's `images/` folder, named in the order they appear (`01-welcome-page.png`, `02-…`). Crop out browser bookmarks, tabs and anything personal before committing. Show them in a guide with `![What it shows](images/01-welcome-page.png)`.
 - **Board config files are region-specific.** An EU board config file used on a US board, or the other way round, can transmit on the wrong frequencies. Always note the region.
 
 ---

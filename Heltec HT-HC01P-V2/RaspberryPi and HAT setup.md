@@ -4,7 +4,7 @@ How to get a **Heltec HT-HC01P V2** Wi-Fi HaLow HAT working on a **Raspberry Pi 
 
 OpenMANET's Pi 4 image is made for a different HaLow HAT (the Seeed WM6108), which uses different GPIO pins. On a Heltec HAT the radio looks like it starts, then keeps timing out. This guide swaps in the right pin settings and board configuration.
 
-> **This guide only gets the Heltec hardware working:** the pin layout, the board config file and a channel setting the radio will accept. It doesn't set up a HaLow network. The setup wizard in the web UI does that; see [WebUi Setup.md](<WebUi Setup.md>) once you've finished here.
+> **This guide only gets the Heltec hardware working:** the pin layout, the board config file and a channel setting the radio will accept. It doesn't set up a HaLow network. The setup wizard in the web UI does that; follow the [mesh](<WebUi Setup - Mesh.md>) or [star](<WebUi Setup - Star.md>) guide once you've finished here ([which one?](README.md#choosing-a-layout)).
 
 Tested with OpenMANET 24.10 (1.8.1) and the EU (863–870 MHz) HT-HC01P V2.
 
@@ -34,6 +34,8 @@ Open **http://10.41.254.1** in a browser. Every new OpenMANET install uses this 
 ### 2. Fill in the welcome page
 
 The welcome page asks for three things:
+
+![OpenMANET welcome page with Country, Hostname and Password](images/01-welcome-page.png)
 
 | Setting | What to enter |
 |---|---|
@@ -118,7 +120,7 @@ Done. Your HaLow radio is broadcasting.
 
 > `iw dev` shows the HaLow channel as a 5 GHz number (e.g. "5660 MHz"). That's normal: the HaLow driver reports it that way. The real frequency (863–868 MHz) appears in `logread | grep hostapd_s1g`.
 
-**Next:** go back to the web UI and run the setup wizard to create the HaLow network. Follow [WebUi Setup.md](<WebUi Setup.md>).
+**Next:** go back to the web UI and set up the HaLow network. Choose a layout ([comparison](README.md#choosing-a-layout)), then follow [WebUi Setup - Mesh.md](<WebUi Setup - Mesh.md>) or [WebUi Setup - Star.md](<WebUi Setup - Star.md>).
 
 ---
 
